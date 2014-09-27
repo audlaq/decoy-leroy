@@ -3,7 +3,11 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_action :set_decoys
+  before_action :run_setup
+
+  def run_setup
+    set_decoys
+  end
 
   def set_decoys
     @decoys = [

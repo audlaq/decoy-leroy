@@ -7,4 +7,5 @@ HackathonStarterRails::Application.routes.draw do
   root 'home#index'
   resources :decoys
   resources :issues
+  resources :admin
 end

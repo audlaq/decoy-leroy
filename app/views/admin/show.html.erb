@@ -1,0 +1,7 @@
+<h2>@<%= current_user.name %> - Are you sure you're a Decoy <%= params[:id] %>?</h2>
+
+<%= form_tag(admin_index_path(username: current_user.name, decoy: params[:id]), method: :post) do %>
+    <%= label_tag(:admin_passcode, "Admin Passcode:") %>
+    <%= text_field_tag(:admin_passcode) %>
+    <%= submit_tag("Submit") %>
+<% end %>
