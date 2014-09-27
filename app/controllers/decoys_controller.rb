@@ -1,15 +1,11 @@
 class DecoysController < ApplicationController
   def index
     # TODO Fetch from googleDoc
-    @decoys = [
-        {
-            id: 1,
-            name: "Leroy"
-        },
-        {
-            id: 2,
-            name: "Troy"
-        }
-    ]
+  end
+
+
+  def show
+    session[:decoy] = params[:id]
+    redirect_to issues_path
   end
 end

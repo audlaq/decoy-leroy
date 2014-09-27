@@ -1,6 +1,8 @@
 <% @decoys.each do |decoy| %>
 
-    <%= decoy.inspect %>
 
+    <%= link_to decoy.name, decoy_path(decoy.id) %>
+    <%= decoy.inspect %>
+    <hr>
 
 <% end %>
