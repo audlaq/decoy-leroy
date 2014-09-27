@@ -1,3 +1,15 @@
-<%= @decoy.inspect %>
-<hr>
-<%= @issues.inspect %>
+<div class="page-header">
+  <h2>What have you done?</h2>
+</div>
+
+  
+  <ul class="list-group">
+	<% @issues.each do | issue | %>
+	
+      <li class="list-group-item"><%= link_to issue %></li>
+       
+  <% end %>
+  </ul>
+ 
+
+ 
