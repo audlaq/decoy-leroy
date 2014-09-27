@@ -16,4 +16,17 @@ class IssuesController < AdminController
       a
     end
   end
+
+
+  def create
+    title = params[:title]
+    content = params[:content]
+
+    decoy = session[:decoy]
+
+    user = User.random_decoy(decoy)
+
+    user.tweet(current_user: current_user, title: title, content: content)
+    redirect_to issues_path
+  end
 end

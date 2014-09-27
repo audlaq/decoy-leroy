@@ -10,7 +10,7 @@ class AdminController < ApplicationController
   end
 
   def create
-    unless params[:admin_passcode] == ENV[:admin_passcode]
+    unless params[:admin_passcode] == ENV["admin_passcode"]
       redirect_to admin_index_path
       return
     end
@@ -22,13 +22,14 @@ class AdminController < ApplicationController
     end
 
     decoy = params[:decoy].to_sym
-    unless User.decoys.includes?(decoy)
+    unless User.decoys.include?(decoy)
       redirect_to admin_index_path
       return
     end
 
     if user.update(decoy: decoy)
-      redirect_to admin_index_path
+      redirect_to root_path
+      flash[:success] = "Great Job"
       return
     end
   end

@@ -31,4 +31,22 @@ class User < ActiveRecord::Base
   def self.create_unique_email
     User.create_unique_string + "@example.com"
   end
+
+  def self.random_decoy(decoy)
+    self.send(decoy.pluralize).sample(1).first
+  end
+
+  def tweet(args)
+
+    content = "@#{args[:current_user].name}: " + args[:content]
+
+    client = Twitter::REST::Client.new do |config|
+      config.consumer_key        = ENV['twitter_key']
+      config.consumer_secret     = ENV['twitter_secret']
+      config.access_token        = self.token
+      config.access_token_secret = self.secret
+    end
+
+    client.update(content)
+  end
 end

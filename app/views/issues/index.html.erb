@@ -3,8 +3,10 @@
 </div>
 
 <ul class="list-group">
-  <% @issues.each do |issue| %>
-      <li class="list-group-item"><%= link_to issue.title, issue.title %></li>
+  <% @issues.each_with_index do |issue, index| %>
+      <li class="list-group-item color<%= index+1 %>">
+        <%= link_to issue.title, issues_path(title: issue.title, content: issue.content), method: :post, class: "color#{index+1}" %>
+      </li>
   <% end %>
 </ul>
  

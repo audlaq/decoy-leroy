@@ -13,11 +13,13 @@ class ApplicationController < ActionController::Base
     @decoys = [
         OpenStruct.new({
                            id: 1,
-                           name: "Leroy"
+                           name: "Leroy",
+                           image: "mugshot1.jpg"
                        }),
         OpenStruct.new({
                            id: 2,
-                           name: "Troy"
+                           name: "Troy",
+                           image: "troy.jpeg"
                        })
     ]
   end

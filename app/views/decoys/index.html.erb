@@ -1,10 +1,11 @@
 <h2>Choose a decoy!</h2>
 
-<% @decoys.each do |decoy| %>
-
-
-    <%= link_to decoy.name, decoy_path(decoy.id) %>
-    <%= decoy.inspect %>
-    <hr>
-
-<% end %>
+<div class="row">
+  <% @decoys.each do |decoy| %>
+      <div class="col-xs-6">
+        <%= link_to decoy_path(decoy.name.downcase) do %>
+            <%= image_tag decoy.image %>
+        <% end %>
+      </div>
+  <% end %>
+</div>

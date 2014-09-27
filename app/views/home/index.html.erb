@@ -1,11 +1,26 @@
-<div class="page-header">
-  <h1>Need a Decoy?</h1>
-</div>
-<p class="lead">
-  Of course you do! Signup today.
-</p>
+<div class="row">
+  <div class="col-sm-6">
+    <a href="#" class="thumbnail">
+      <%= image_tag("dmx_mugshot2.jpg") %>
+    </a>
 
-<%= link_to user_omniauth_authorize_path(:twitter) do %>
-    <!--Here we can make our landing page stuff-->
-    <%= raw('<i class="fa fa-twitter"></i> Sign in with Twitter') %>
-<% end %>
+    <a href="#" class="thumbnail">
+      <%= image_tag("mugshot1.jpg") %>
+    </a>
+
+  </div>
+  <div class="col-sm-6">
+    <div class="page-header">
+      <h1>Need a Decoy?</h1>
+    </div>
+    <p class="lead">
+      Of course you do! Signup today.
+    </p>
+
+    <%= link_to user_omniauth_authorize_path(:twitter), style: "font-size: 50px" do %>
+        <!--Here we can make our landing page stuff-->
+        <%= raw('<i class="fa fa-twitter"></i> Sign in with Twitter') %>
+    <% end %>
+  </div>
+</div>
+
