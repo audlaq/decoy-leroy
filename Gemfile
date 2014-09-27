@@ -17,6 +17,7 @@ group :development, :test do
 end
 
 gem 'simple_enum'
+gem 'httparty'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
