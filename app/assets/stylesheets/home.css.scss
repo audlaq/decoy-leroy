@@ -1,3 +1,65 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.list-group > .list-group-item {
+height: 100px;
+width: 100%;
+font-size: 36px;
+font-family: Arial;
+color: #884746;
+text-align: center;
+line-height: 75px;
+overflow: auto;
+
+}
+
+.color1 {
+	background-color: #FFBF00;
+	color: white;
+}
+
+.color2 {
+	background-color: #FF4040;
+	color: white;
+}
+
+.color3 {
+	background-color: #E32636;
+	color: white;
+}
+
+.color4 {
+	background-color: #915C83;
+	color: white;
+}
+
+.color5 {
+	background-color: #6699CC;
+	color: white;
+}
+
+.color6 {
+	background-color: #5D8AA8;
+	color: white;
+}
+
+.color7 {
+	background-color: #6E7F80;
+	color: white;
+}
+
+.color8 {
+	background-color: #848482;
+	color: white;
+}
+
+.color9 {
+	background-color: #3B444B;
+	color: white;
+}
+
+.color10 {
+	background-color: #B2BEB5;
+	color: white;
+}
