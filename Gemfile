@@ -16,6 +16,7 @@ group :development, :test do
   gem 'pry-rails'
 end
 
+gem 'simple_enum'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
