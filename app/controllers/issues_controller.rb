@@ -1,4 +1,4 @@
-class IssuesController < ApplicationController
+class IssuesController < AdminController
   def index
     # TODO: find the decoy by the session
     @decoy = @decoys.first

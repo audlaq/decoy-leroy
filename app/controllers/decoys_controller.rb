@@ -1,4 +1,4 @@
-class DecoysController < ApplicationController
+class DecoysController < AdminController
   def index
     # TODO Fetch from googleDoc
   end
